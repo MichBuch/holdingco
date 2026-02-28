@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-900 text-cyan-100;
+  }
+}
+
+@layer utilities {
+  .neon-card {
+    box-shadow: 0 0 30px rgba(6, 182, 212, 0.1);
+  }
+  .neon-card-hover:hover {
+    box-shadow: 0 0 40px rgba(6, 182, 212, 0.25);
+  }
+  .neon-btn {
+    box-shadow: 0 0 20px rgba(6, 182, 212, 0.3);
+  }
+  .neon-input {
+    box-shadow: inset 0 0 10px rgba(6, 182, 212, 0.1);
+  }
+}
