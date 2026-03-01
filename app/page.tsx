@@ -8,6 +8,10 @@ const totalCount = PRODUCTS.length;
 export default function HomePage() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center px-6 py-20 text-center">
+      {/* WIP Banner */}
+      <div className="fixed top-16 inset-x-0 z-40 bg-yellow-500/10 border-b border-yellow-500/30 text-yellow-400 text-sm text-center py-2 px-4">
+        🚧 W.I.P. — This site is under construction. These are mostly products in the making.
+      </div>
       {/* Hero */}
       <div className="max-w-3xl mx-auto">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-sm mb-6">
