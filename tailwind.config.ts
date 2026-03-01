@@ -16,12 +16,10 @@ const config: Config = {
     },
   },
   safelist: [
-    { pattern: /bg-(cyan|pink|blue|purple|yellow|red|green|orange|indigo)-(500)\/(10|20)/ },
-    { pattern: /border-(cyan|pink|blue|purple|yellow|red|green|orange|indigo)-(500)\/(30)/ },
-    { pattern: /border-(cyan|pink|blue|purple|yellow|red|green|orange|indigo)-(500)/ },
-    { pattern: /text-(cyan|pink|blue|purple|yellow|red|green|orange|indigo)-(400)/ },
-    { pattern: /hover:bg-(cyan|pink|blue|purple|yellow|red|green|orange|indigo)-(500)\/(20)/ },
-    { pattern: /hover:border-(cyan|pink|blue|purple|yellow|red|green|orange|indigo)-(500)/ },
+    { pattern: /^bg-(cyan|pink|blue|purple|yellow|red|green|orange|indigo)-500\/(10|20)$/ },
+    { pattern: /^border-(cyan|pink|blue|purple|yellow|red|green|orange|indigo)-500\/(30)$/ },
+    { pattern: /^border-(cyan|pink|blue|purple|yellow|red|green|orange|indigo)-500$/ },
+    { pattern: /^text-(cyan|pink|blue|purple|yellow|red|green|orange|indigo)-400$/ },
   ],
   plugins: [],
 };
