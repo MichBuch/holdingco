@@ -42,11 +42,8 @@ export default function ProductTile({ product, onClick }: Props) {
         <p className="text-cyan-300 text-sm mt-0.5 line-clamp-2">{product.tagline}</p>
       </div>
 
-      {/* Price / CTA */}
-      <div className="mt-auto flex items-center justify-between">
-        <span className="text-cyan-400 text-sm font-medium">
-          {product.priceLabel ?? (product.status === "live" ? "Free" : "—")}
-        </span>
+      {/* CTA */}
+      <div className="mt-auto flex items-center justify-end">
         <ExternalLink className="w-4 h-4 text-cyan-700" />
       </div>
     </div>

@@ -22,8 +22,6 @@ export interface Product {
   description: string;
   category: ProductCategory;
   status: ProductStatus;
-  price?: number; // null = free / contact
-  priceLabel?: string;
   url?: string;
   downloadUrl?: string;
   imageUrl?: string;

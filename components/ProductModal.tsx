@@ -14,16 +14,6 @@ export default function ProductModal({ product, onClose }: Props) {
   const catColor = CATEGORY_COLORS[product.category] ?? "cyan";
   const statusColor = STATUS_COLORS[product.status] ?? "cyan";
 
-  async function handleBuy() {
-    const res = await fetch("/api/checkout", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ productId: product!.id }),
-    });
-    const { url } = await res.json();
-    if (url) window.location.href = url;
-  }
-
   return (
     <div
       className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-4"
@@ -76,23 +66,18 @@ export default function ProductModal({ product, onClose }: Props) {
           ))}
         </div>
 
-        {/* Price */}
-        {product.priceLabel && (
-          <p className="text-cyan-400 font-semibold text-lg mb-5">
-            {product.priceLabel}
-          </p>
-        )}
-
         {/* Actions */}
         <div className="flex flex-wrap gap-3">
-          {product.price && product.status === "live" && (
-            <button
-              onClick={handleBuy}
+          {product.url && product.status === "live" && (
+            <a
+              href={`${product.url}/pricing`}
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-2 bg-cyan-600 hover:bg-cyan-500 text-slate-900 px-4 py-2 rounded-lg font-medium transition-colors neon-btn"
             >
               <ShoppingCart className="w-4 h-4" />
-              Buy Now
-            </button>
+              View Pricing
+            </a>
           )}
           {product.url && (
             <a
